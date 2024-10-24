@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling Animations Website</title>
+    <title>Star Trek Theme Website</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
     <!-- AOS (Animate on Scroll) CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -24,14 +24,17 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             scroll-behavior: smooth;
+            background-color: #000;
+            /* Space-like background */
+            color: #fff;
         }
 
         nav {
             position: fixed;
             width: 100%;
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             padding: 1em;
             text-align: center;
@@ -39,7 +42,7 @@
         }
 
         nav a {
-            color: white;
+            color: #fff;
             margin: 0 15px;
             text-decoration: none;
             font-weight: 600;
@@ -52,41 +55,62 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-size: cover;
+            background-position: center;
         }
 
+        /* Section Backgrounds */
         .hero {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: white;
+            background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: cover;
         }
 
         .about {
-            background-color: #f3f4f6;
+            background: url('https://images.unsplash.com/photo-1504203700567-41d5d0c3a0f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
         }
 
         .services {
-            background-color: #ffefd5;
+            background: url('https://images.unsplash.com/photo-1504207634862-df9a23f0f850?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
         }
 
         .portfolio {
-            background-color: #ffe4b5;
+            background: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
         }
 
         .testimonials {
-            background-color: #d3d3d3;
+            background: url('https://images.unsplash.com/photo-1523805009345-7448845a9e49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
         }
 
         .contact {
-            background-color: #add8e6;
+            background: url('https://images.unsplash.com/photo-1516091877740-fde016699f20?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
         }
 
         h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
+            color: #00ffcc;
+            /* Starfleet-like color */
         }
 
         p {
             font-size: 1.2em;
             line-height: 1.6;
+            color: #fff;
+        }
+
+        /* Starfleet Badge */
+        .starfleet-badge {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Customize AOS Animations */
+        [data-aos="fade-up"] {
+            transition: all 1.2s ease;
+        }
+
+        [data-aos="zoom-in"] {
+            transition: all 1.5s ease;
         }
     </style>
 </head>
@@ -105,38 +129,40 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero" data-aos="fade-up">
-        <h1>Welcome to Our Website</h1>
-        <p>Explore our awesome scrolling animations!</p>
+        <h1>Explore the Universe</h1>
+        <p>Join us as we boldly go where no one has gone before.</p>
+        <img class="starfleet-badge" src="https://upload.wikimedia.org/wikipedia/commons/5/58/Starfleet.png"
+            alt="Starfleet Badge">
     </section>
 
     <!-- About Section -->
     <section id="about" class="about" data-aos="fade-left">
-        <h1>About Us</h1>
-        <p>We are a creative agency focused on delivering quality work to our clients.</p>
+        <h1>About the Crew</h1>
+        <p>We are explorers, engineers, and dreamers on a mission to discover the unknown.</p>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services" data-aos="fade-right">
-        <h1>Our Services</h1>
-        <p>We offer a wide range of services including web development, design, and marketing.</p>
+        <h1>Our Missions</h1>
+        <p>We provide solutions for exploring space, defending the galaxy, and discovering new life forms.</p>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio" data-aos="zoom-in">
-        <h1>Our Portfolio</h1>
-        <p>Check out some of our latest projects.</p>
+        <h1>Starfleet Operations</h1>
+        <p>Take a look at some of the greatest missions accomplished by Starfleet.</p>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials" data-aos="flip-up">
-        <h1>What Our Clients Say</h1>
-        <p>"They did an amazing job on our website!" - A Happy Client</p>
+        <h1>Captains' Logs</h1>
+        <p>"The Enterprise's crew is second to none in their ability to overcome impossible odds." - Captain Kirk</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact" data-aos="fade-up">
-        <h1>Contact Us</h1>
-        <p>Get in touch with us for your next project.</p>
+        <h1>Contact Starfleet</h1>
+        <p>Join us on our journey through the stars. We're always looking for new recruits!</p>
     </section>
 
     <!-- AOS Script (for Scroll Animations) -->
